@@ -1,12 +1,35 @@
 <template>
   <nav>
-    <a>Dc heros</a>
+    <router-link
+        v-for="item in list"
+        :key="item.to"
+        :to="item.to">
+      {{ item.title }}
+    </router-link>
   </nav>
 </template>
 
 <script>
 export default {
-  name: "AppHeader"
+  name: "AppHeader",
+  data() {
+    return {
+      list: [
+        {
+          title: "Dc heros",
+          to: "/ds-heros"
+        },
+        {
+          title: "Calendar",
+          to: "/calendar"
+        },
+        {
+          title: "Markdown",
+          to: "/markdown"
+        }
+      ]
+    }
+  }
 }
 </script>
 
@@ -18,5 +41,7 @@ export default {
   }
   nav a {
     padding: 5px;
+    color: #fff;
+    text-decoration: none;
   }
 </style>

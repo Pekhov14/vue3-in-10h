@@ -1,19 +1,15 @@
 <template>
   <AppHeader/>
   <div class="wrap">
-<!--    <DcHeros/>-->
-    <Calendar/>
+<!--  Сюда подгружаються компоненты  -->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
   import AppHeader from "@/components/AppHeader";
-  import Calendar from "@/components/Calendar";
-  // import DcHeros from "@/components/DcHeros";
   export default {
     components: {
-      Calendar,
-      // DcHeros,
       AppHeader
     },
   }
